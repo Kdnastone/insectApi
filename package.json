@@ -1,9 +1,10 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "**#🐞 API de Insectos de Interés para Regulación en Colombia**",
-  "main": "index.js",
+  "description": "API de Insectos de Interés para Regulación en Colombia",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,8 @@
   "homepage": "https://github.com/Kdnastone/insectApi#readme",
   "dependencies": {
     "express": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
