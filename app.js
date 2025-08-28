@@ -1,3 +1,4 @@
+// Declarar las constantes
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -5,7 +6,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware para permitir solo GET
+// Middleware global para permitir solo GET
 app.all('*', (req, res, next) => {
   if (req.method !== 'GET') {
     return res.status(405).send('Método no permitido. Solo GET está disponible.');
@@ -20,16 +21,16 @@ app.get('/', (req, res) => {
 
 // Ruta para leer especies desde db.json
 app.get('/especies', (req, res) => {
-  const dbPath = path.join(__dirname, 'db.json');
-  fs.readFile(dbPath, 'utf8', (err, data) => {
+  const filePath = path.join(__dirname, 'db.json');
+  fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
-      return res.status(500).json({ error: 'No se pudo leer db.json' });
+      return res.status(500).send('Error al leer la base de datos.');
     }
     try {
       const especies = JSON.parse(data);
       res.json(especies);
-    } catch (parseErr) {
-      res.status(500).json({ error: 'Error al parsear db.json' });
+    } catch (parseError) {
+      res.status(500).send('Error al procesar los datos.');
     }
   });
 });
