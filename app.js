@@ -1,3 +1,6 @@
+app.get('/', (req, res) => {
+  res.send('Bienvenido a la API de insectos. Visita https://insectapi.onrender.com/especies para ver los datos.');
+});
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
