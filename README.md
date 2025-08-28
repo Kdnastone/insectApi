@@ -20,7 +20,7 @@ Esta API permite consultar una lista de especies de insectos relevantes para pro
 Para empezar a usarla:  
 - No necesitas autenticación ni claves API.
 - La API responde únicamente al método GET.
-- Los datos están en formato JSON.add 
+- Los datos están en formato JSON.
 - El único endpoint disponible actualmente es: GET /especies
 - Para obtener información de una sola especie: GET /especies/:id
 
