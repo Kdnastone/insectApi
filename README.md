@@ -16,13 +16,12 @@ Esta API pretende servir como insumo técnico para:
 Esta API es parte de una iniciativa abierta y educativa, con miras a facilitar el acceso libre y comprensible a datos clave que contribuyan a una regulación más integral, eficiente y adaptativa del uso de insectos en Colombia en el marco de Servicios Ecosistémicos.  
 
 ## ✅ Guía de inicio rápido
-Esta API permite consultar una lista de especies de insectos relevantes para procesos de regulación, conservación e investigación en Colombia.  
-Para empezar a usarla:  
-- No necesitas autenticación ni claves API.
-- La API responde únicamente al método GET.
-- Los datos están en formato JSON.
-- El único endpoint disponible actualmente es: GET /especies
-- Para obtener información de una sola especie: GET /especies/:id
+Esta API permite consultar una lista de especies de insectos introducidos en Colombia relevantes para regulación, conservación e investigación en Colombia.
+
+Puntos clave:
+- Sin autenticación ni claves API.
+- Solo responde a solicitudes GET.
+- Base URL: https://insectapi.onrender.com/especies
 
 ## 🔐 Autenticación
 Actualmente, esta API no requiere autenticación porque está diseñada como una herramienta educativa y de libre acceso.  
